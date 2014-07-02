@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/k2052/notes-example-api.grape.svg)](https://travis-ci.org/k2052/notes-example-api.grape) [![Dependency Status](https://gemnasium.com/k2052/notes-example-api.grape.svg)](https://gemnasium.com/k2052/notes-example-api.grape) [![Code Climate](https://codeclimate.com/github/k2052/notes-example-api.grape.png)](https://codeclimate.com/github/k2052/notes-example-api.grape)
+
 An example API app using [Grape](https://github.com/intridea/grape)
 
 ## Deploying
