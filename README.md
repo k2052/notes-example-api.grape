@@ -1,4 +1,4 @@
-eAn example API app using Grape.
+An example API app using [Grape](https://github.com/intridea/grape)
 
 ## Deploying
 
@@ -58,7 +58,7 @@ First setup MongoDB:
     $ git clone https://github.com/jeffutter/dokku-mongodb-plugin.git /var/lib/dokku/plugins/mongodb
     $ dokku plugins-install
 
-Then just add your dokku remote and push.
+Then just add your Dokku remote and push.
 
 ## Tests
 
