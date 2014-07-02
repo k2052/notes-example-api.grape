@@ -1,4 +1,4 @@
-An example API app using Grape.
+eAn example API app using Grape.
 
 ## Deploying
 
@@ -23,6 +23,33 @@ Or:
 Then deploy:
 
     $ git push heroku master
+
+If you want to test everything is working you can seed with test data:
+
+    $ heroku run bundle exec rake seed
+    $ http GET http://appnae.herokuapp.com/notes/1 X-Token:TestKey 
+
+And you should get back:
+
+        HTTP/1.1 200 OK
+        Connection: keep-alive
+        Content-Length: 48
+        Content-Type: application/json
+
+        {
+            "notes": [
+                {
+                    "id": "1", 
+                    "title": "Jogging in park"
+                }
+            ]
+        }
+
+Just make sure to remove the test key afterwards:
+
+    $ bundle exec unseed
+
+*Note*: Unseed will destroy all data!
 
 ### On Dokku
 
