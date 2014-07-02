@@ -1,10 +1,13 @@
 #!/usr/bin/env rake
 require File.expand_path('../application', __FILE__)
-require 'rspec/core/rake_task'
 
-RSpec::Core::RakeTask.new(:spec)
-
-task :default => :spec
+if Notes.env == 'test'
+	require 'rspec/core/rake_task'
+	RSpec::Core::RakeTask.new(:spec)
+	task :default => :spec
+else 
+	task :default => :seed
+end
 
 task :seed do
 	testkey = ApiKey.find_by_access_token "TestKey"
