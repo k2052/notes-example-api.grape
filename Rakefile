@@ -20,3 +20,9 @@ task :seed do
 	Note.create(id: "1", title: "Jogging in park")
 	Note.create(id: "2", title: "Pick-up posters from post-office")
 end
+
+task :unseed do
+	Account.destroy_all()
+	ApiKey.destroy_all()
+  Note.destroy_all()
+end
